@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      height: 100vh;
+      background: url("https://quotefancy.com/media/wallpaper/3840x2160/33969-Julie-Andrews-Quote-Perseverance-is-failing-19-times-and.jpg") 50% fixed;
+      background-size: cover;
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotateZ(0deg);
+      }
+
+      100% {
+        transform: rotateZ(359deg);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      width: 100%;
+      min-height: 100%;
+      padding: 20px;
+    }
+
+    button {
+      font-size: 2em;
+      color: aliceblue;
+      background: rgba(0, 0, 0, 0.8);
+      border: black solid 5px;
+      padding: 10px;
+      margin: 70px;
+      border-radius: 10px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <form method="post">
+      <input type="hidden" name="done" value="true">
+      <button onclick="">
+        <span class="state">Continue to Level 3</span>
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>
