@@ -1,9 +1,8 @@
 from random import choice
 from django.shortcuts import redirect, render
-password = choice(['kgf', 'valimai', 'beast'])
 
 def index(request):
-  global password
+  password = choice(['kgf', 'valimai', 'beast'])
   if(request.method == 'POST'):
     if(request.POST.get('password') == password):
       return redirect('/f1insp')
