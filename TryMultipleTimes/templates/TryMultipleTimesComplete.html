@@ -45,6 +45,13 @@
       padding: 10px;
       margin: 70px;
       border-radius: 10px;
+      transition: 500ms;
+    }
+
+    button:hover {
+      background: rgba(1, 1, 1, 0.5);
+      border: darkgrey solid 5px;
+      transition: 500ms;
     }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -54,6 +61,7 @@
 <body>
   <div class="wrapper">
     <form method="post">
+      {% csrf_token %}
       <input type="hidden" name="done" value="true">
       <button onclick="">
         <span class="state">Continue to Level 3</span>

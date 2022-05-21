@@ -195,8 +195,8 @@
     </div>
     <form class="login" method="post">
       {% csrf_token %}
-      <p class="title">Level 1</p>
-      <input type="text" placeholder="Key" />
+      <p class="title">Level 2</p>
+      <input type="text" placeholder="Key" autofocus autocomplete="off" />
       <i class="fa fa-key"></i>
       <p>{{res|default:"Guess the Password"}}</p>
       <button type="submit">

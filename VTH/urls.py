@@ -15,16 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
-from django.views.static import serve
-from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('5', include('StrFn.urls')),
-    path('2', include('TryMultipleTimes.urls')),
-    
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    path('1.1', include('QnA.urls')),
+    path('1.2', include('QnA2.urls')),
+    path('2.1', include('TryMultipleTimes.urls')),
+    path('2.2', include('TryAgain.urls')),
+    path('3', include('TryDifferentView.urls')),
+    path('4', include('CommentLine.urls')),
+    path('5', include('StringFunction.urls')),
 ]

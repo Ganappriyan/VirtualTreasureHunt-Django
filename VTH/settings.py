@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d&5kxwqd%g*(4u9@0a6_c=)d2!kgo6s)rz*@7q%$0p1=*^sc%='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['virtual-treasure-hunt.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,14 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home.apps.HomeConfig', # Adds home app
-    'StrFn.apps.StrfnConfig', # Adds String Function Page
-    'TryMultipleTimes.apps.TrymultipletimesConfig' # Try Multiple Times Page
+    
+    'QnA.apps.QnaConfig', # Adds QnA Page 1
+    'QnA2.apps.Qna2Config', # Adds QnA Page 2
+    'TryMultipleTimes.apps.TrymultipletimesConfig', # Adds Try Multiple Times Page
+    'TryAgain.apps.TryagainConfig', # Adds Try Again Page
+    'TryDifferentView.apps.TrydifferentviewConfig', # Adds Try Different View Page
+    'CommentLine.apps.CommentlineConfig', # Adds Comment Line Page
+    'StringFunction.apps.StringfunctionConfig', # Adds String Function Page
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

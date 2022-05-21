@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level 1</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            height: 100vh;
+            background: lightgreen;
+        }
+
+        main {
+            background: url(https://i0.wp.com/www.quotespedia.org/ywhypsaw/2020/12/14122020009.jpg?fit=2560%2C1600&ssl=1) 50% fixed no-repeat;
+            background-size: contain;
+        }
+
+        @keyframes spinner {
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(359deg);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        button {
+            position: absolute;
+            right: 10%;
+            bottom: 0%;
+            font-size: 2em;
+            color: aliceblue;
+            background: rgba(0, 0, 0, 0.8);
+            border: black solid 5px;
+            padding: 10px;
+            margin: 70px;
+            border-radius: 10px;
+            transition: 500ms;
+        }
+
+        button:hover {
+            background: rgba(1, 1, 1, 0.5);
+            border: darkgrey solid 5px;
+            transition: 500ms;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+    <main class='wrapper'>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="done" value="true">
+            <button type="submit">
+                <span class="state">Continue to Level 3</span>
+            </button>
+        </form>
+    </main>
+</body>
+
+</html>

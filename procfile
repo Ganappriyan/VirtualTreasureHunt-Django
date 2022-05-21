@@ -1,1 +1,0 @@
-web: gunicorn VTH.wsgi --log-file -
