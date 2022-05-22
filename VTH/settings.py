@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'TryDifferentView.apps.TrydifferentviewConfig', # Adds Try Different View Page
     'CommentLine.apps.CommentlineConfig', # Adds Comment Line Page
     'StringFunction.apps.StringfunctionConfig', # Adds String Function Page
+    'Home.apps.HomeConfig', # Adds Home Page
 ]
 
 MIDDLEWARE = [
