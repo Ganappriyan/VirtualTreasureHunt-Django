@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.template import loader
 
@@ -6,13 +6,11 @@ count=0
 def index(request): # Render Page & Validation
   if(request.method == 'POST'):
     if(request.POST.get('done') == 'true'):
-      print('Done: True')
-      pass
+      return redirect('/3diff')
     global count
     count += 1
     print('Count:',count)
     key = request.POST.get('key')
-    print('\nKey: ', key) # TODO: Remove This Line
     if(key in ('PASSWORD', 'password', 'WRONG', 'wrong', 'AGAIN', 'again')):
       count = 0
       return render(request, 'TryAgainComplete.html')
