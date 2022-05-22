@@ -109,7 +109,8 @@
           <div class="card-body bg-info d-flex justify-content-center" style="font-family: 'Montserrat', sans-serif">
             <form method="post">
               {% csrf_token %}
-              <div class="mb-4">
+              <p class="text-center d-block d-sm-none" style="font-family: 'Ubuntu', sans-serif"> Password: {{ pass }}</p>
+              <div class="mb-4 d-none d-sm-block">
                 <div class="d-flex justify-content-between">
                   <label for="password" class="form-label">Password:</label>
                   <span id="myImg">Hint</span>
@@ -118,13 +119,12 @@
                   value="" autofocus autocomplete="off">
               </div>
               <div class="mb-2 d-flex justify-content-center">
-                <input class="btn btn-primary" type="submit" value="Check" />
+                <input class="btn btn-primary d-none d-sm-block" type="submit" value="Check" />
               </div>
               <!-- Trigger the Modal -->
               <div class='text-center'>{{ cmd }}</div>
             </form>
           </div>
-          <p class="text-center d-block d-sm-none" style="font-family: 'Ubuntu', sans-serif"> Password: {{ pass }}</p>
         </div>
       </div>
     </div>
