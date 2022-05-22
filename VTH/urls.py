@@ -19,9 +19,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('1.1qna', include('QnA.urls')),
-    path('1.2qna', include('QnA2.urls')),
+    path('1.2qnac', include('QnA2.urls')),
     path('2.1try', include('TryMultipleTimes.urls')),
-    path('2.2try', include('TryAgain.urls')),
+    path('2.2tryb', include('TryAgain.urls')),
     path('3diff', include('TryDifferentView.urls')),
     path('f1insp', include('CommentLine.urls')),
     path('f2strfn', include('StringFunction.urls')),

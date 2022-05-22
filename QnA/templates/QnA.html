@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!----======== CSS ======== -->
-  <link rel="stylesheet" href="QnA.css">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'QnA.css' %}">
 
   <!----===== Iconscout CSS ===== -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -20,41 +21,50 @@
   <div class="container">
     <header>Level 1 - Answer all Questions</header>
 
-    <form action="#">
+    <form method="post">
+      {% csrf_token %}
       <div class="form first">
         <div class="details personal">
-          <!-- <span class="title">Personal Details</span> -->
-
           <div class="fields">
             <div class="input-field">
               <label>1. The average of 20 numbers is zero. Of them, at the most, how many may be greater than
                 zero?</label>
               <div>
-                <span><input type="radio" name="q1" id="q1o1"><label for="q1o1">0</label></span>
-                <span><input type="radio" name="q1" id="q1o2"><label for="q1o2">1</label></span>
-                <span><input type="radio" name="q1" id="q1o3"><label for="q1o3">19</label></span>
-                <span><input type="radio" name="q1" id="q1o4"><label for="q1o4">20</label></span>
+                <span><input type="radio" name="q1" id="q1o1" value="o1" required><label for="q1o1">0</label></span>
+                <span><input type="radio" name="q1" id="q1o2" value="o2" required><label for="q1o2">1</label></span>
+                <span><input type="radio" name="q1" id="q1o3" value="o3" required><label for="q1o3">19</label></span>
+                <span><input type="radio" name="q1" id="q1o4" value="o4" required><label for="q1o4">20</label></span>
+              </div>
+              <div style="color: red">
+                {{h1}}
               </div>
             </div>
 
             <div class="input-field">
               <label>2. Engineering is a,</label>
               <div>
-                <span><input type="checkbox" name="q2" id="q2o1"><label for="q2o1">Noun</label></span>
-                <span><input type="checkbox" name="q2" id="q2o2"><label for="q2o2">Verb</label></span>
-                <span><input type="checkbox" name="q2" id="q2o3"><label for="q2o3">Professional Degree</label></span>
-                <span><input type="checkbox" name="q2" id="q2o4"><label for="q2o4">Application of Science</label></span>
+                <span><input type="checkbox" name="q2" id="q2o1" value="o1"><label for="q2o1">Noun</label></span>
+                <span><input type="checkbox" name="q2" id="q2o2" value="o2"><label for="q2o2">Verb</label></span>
+                <span><input type="checkbox" name="q2" id="q2o3" value="o3"><label for="q2o3">Professional Degree</label></span>
+                <span><input type="checkbox" name="q2" id="q2o4" value="o4"><label for="q2o4">Application of Science</label></span>
+              </div>
+              <div style="color: red">
+                {{h2}}
               </div>
             </div>
 
             <div class="input-field">
-              <label>3. What is Full Form of "GOOGLE"?</label>
-              <input type="text" placeholder="Enter answer" required>
+              <label>3. I am looking for a word that change both gender and number when i add the letter 'S'.
+                What Word Am I Looking For ?</label>
+              <input type="text" placeholder="Enter answer" name="q3" required>
+              <div style="color: red">
+                {{h3}}
+              </div>
             </div>
 
 
             <div class="buttons">
-              <button class="sumbit">
+              <button type="submit" class="sumbit">
                 <span class="btnText">Submit</span>
                 <i class="uil uil-navigator"></i>
               </button>
