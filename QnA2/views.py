@@ -5,7 +5,7 @@ def index(request):
     if(request.method == 'POST'):
         h1 = '' if (request.POST.get('q1') == 'o2') else 'Wrong Answer'
         h2 = '' if (sorted(request.POST.getlist('q2')) == [
-            'o1', 'o2', 'o3', 'o4']) else 'Wrong Answer'
+            'o2', 'o3']) else 'Wrong Answer'
         h3 = '' if (request.POST.get('q3').lower()
                     == 'n') else 'Wrong Answer'
         
