@@ -2,15 +2,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Level 1</title>
+  <title>Level 2</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  {% load static %}
   <style>
     body {
       font-family: "Open Sans", sans-serif;
       height: 100vh;
-      background: url("https://images.unsplash.com/photo-1495476479092-6ece1898a101?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80") 50% fixed;
+      background: url("{% static 'lvl2.2_background.jpg' %}") 50% fixed;
       background-size: cover;
     }
 
@@ -191,7 +192,7 @@
 <body>
   <div class="wrapper">
     <div>
-      <img src="https://pbs.twimg.com/media/EVijyMuU4AAiXti?format=jpg&name=small" alt="Never Give Up" />
+      <img src="{% static 'lvl2.2_hint.jpeg' %}" alt="Never Give Up" />
     </div>
     <form class="login" method="post">
       {% csrf_token %}

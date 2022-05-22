@@ -2,15 +2,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Level 1</title>
+  <title>Level 2</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  {% load static %}
   <style>
     body {
       font-family: "Open Sans", sans-serif;
       height: 100vh;
-      background: url("https://quotefancy.com/media/wallpaper/3840x2160/33969-Julie-Andrews-Quote-Perseverance-is-failing-19-times-and.jpg") 50% fixed;
+      background: url("{% static 'lvl2.2_win.jpg' %}") 50% fixed;
       background-size: cover;
     }
 
