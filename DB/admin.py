@@ -5,7 +5,7 @@ admin.site.register(Finalers)
 
 
 class ParticipantsAdmin(admin.ModelAdmin):
-    list_display = ('teamname', 'collegename', 'starttime1',
+    list_display = ('teamname', 'collegename', 'phoneno', 'starttime1',
                     'level1', 'level2', 'level3', 'totaltime1')
 
 

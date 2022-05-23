@@ -28,6 +28,6 @@ def index(request):
     
     return render(request, 'TryDifferentView.html', {'pass': actualPassword, 'cmd': 'Wrong Password'})
   
-  actualPassword = choice(['free fire', 'don don don', 'shawarma', 'addict', 'pubg'])
+  actualPassword = 'don don don'
   request.session['actualPassword'] = actualPassword
   return render(request, 'TryDifferentView.html', {'pass': actualPassword})
