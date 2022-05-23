@@ -12,16 +12,9 @@ def index(request):
                     == 'n') else 'Wrong Answer'
         
         if(h1 == h2 == h3 == ''):
-            stime = request.session['stime']
             teamname = request.session['teamname']
-            collegename = request.session['collegename']
             
             ctime = datetime.now().strftime("%H:%M:%S")
-            
-            # TODO TMP
-            diff = datetime.strptime(ctime, "%H:%M:%S") - \
-                datetime.strptime(stime, "%H:%M:%S")
-            print("DTime: ", diff)
                 
             data = Participants.objects.get(teamname=teamname)
             data.level1 = ctime

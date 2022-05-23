@@ -13,16 +13,13 @@ def index(request):
                     in ['princes', 'princess']) else 'Wrong Answer'
         
         if(h1 == h2 == h3 == ''):
-            stime = request.session['stime']
             teamname = request.session['teamname']
-            collegename = request.session['collegename']
             
             ctime = datetime.now().strftime("%H:%M:%S")
                 
             data = Participants.objects.get(teamname=teamname)
             data.level1 = ctime
             data.save()
-            
             
             return redirect('/2.1try')
         return render(request, 'QnA.html', {'h1': h1, 'h2': h2, 'h3': h3})

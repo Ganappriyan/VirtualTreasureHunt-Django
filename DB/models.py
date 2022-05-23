@@ -1,9 +1,10 @@
 from django.db import models
 
 class Participants(models.Model):
-  teamname = models.CharField(max_length=50, unique=True)
+  teamname = models.CharField(max_length=50, default='NULL')
   collegename = models.CharField(max_length=50, default='NULL')
-  starttime = models.CharField(max_length=10, default='0:0:0')
+  starttime1 = models.CharField(max_length=10, default='0:0:0')
+  starttime2 = models.CharField(max_length=10, default='0:0:0')
   level1 = models.CharField(max_length=10, default='0:0:0')
   level2 = models.CharField(max_length=10, default='0:0:0')
   level3 = models.CharField(max_length=10, default='0:0:0')

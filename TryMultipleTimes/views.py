@@ -9,7 +9,6 @@ def index(request): # Render Page & Validation
     done = request.POST.get('done')
     if(done=='true'):
       teamname = request.session['teamname']
-      collegename = request.session['collegename']
       
       ctime = datetime.now().strftime("%H:%M:%S")
       

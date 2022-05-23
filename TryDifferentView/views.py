@@ -13,17 +13,14 @@ def index(request):
     
     if(password == request.COOKIES['pass']):
       teamname = request.session['teamname']
-      collegename = request.session['collegename']
       
       ctime = datetime.now().strftime("%H:%M:%S")
       
       data = Participants.objects.get(teamname=teamname)
-      stime = data.starttime
-      print('STime: ', stime) # TODO Remove
+      stime = data.starttime1
       
       diff = datetime.strptime(ctime, "%H:%M:%S") - \
                 datetime.strptime(stime, "%H:%M:%S")
-      print("DTime: ", diff)  # TODO Remove
       
       data.level3 = ctime
       data.totaltime1 = diff
