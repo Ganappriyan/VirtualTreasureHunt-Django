@@ -1,3 +1,6 @@
 from django.contrib import admin
+from DB.models import Participants, Finalers
 
-# Register your models here.
+
+admin.site.register(Participants)
+admin.site.register(Finalers)
