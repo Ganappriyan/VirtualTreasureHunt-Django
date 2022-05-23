@@ -18,11 +18,6 @@ def index(request):
             collegename = request.session['collegename']
             
             ctime = datetime.now().strftime("%H:%M:%S")
-            
-            # TODO TMP
-            diff = datetime.strptime(ctime, "%H:%M:%S") - \
-                datetime.strptime(stime, "%H:%M:%S")
-            print("DTime: ", diff)
                 
             data = Participants.objects.get(teamname=teamname)
             data.level1 = ctime
