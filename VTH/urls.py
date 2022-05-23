@@ -28,4 +28,5 @@ urlpatterns = [
     path('s1', include('Home.urls')),
     path('se2', include('Home2.urls')),
     path('fin', include('Home3.urls')),
+    path('', include('Home.urls')),
 ]

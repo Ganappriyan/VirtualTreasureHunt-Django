@@ -5,13 +5,11 @@ from django.shortcuts import render
 from DB.models import Participants
 
 def index(request):
-  if('pass' in request.COOKIES):
-    print("Cookies: ", request.COOKIES['pass'])  #TODO: Remove
-  
   if(request.method == 'POST'):
-    password = request.POST.get('password')
+    typedPassword = request.POST.get('password')
+    actualPassword = request.session['actualPassword']
     
-    if(password == request.COOKIES['pass']):
+    if(typedPassword == actualPassword):
       teamname = request.session['teamname']
       
       ctime = datetime.now().strftime("%H:%M:%S")
@@ -28,9 +26,8 @@ def index(request):
       
       return render(request, 'TryDifferentViewComplete.html')
     
-    return render(request, 'TryDifferentView.html', {'pass': password, 'cmd': 'Wrong Password'})
+    return render(request, 'TryDifferentView.html', {'pass': actualPassword, 'cmd': 'Wrong Password'})
   
-  password = 'iphone'
-  response = render(request, 'TryDifferentView.html', {'pass': password})
-  response.set_cookie(key='pass', value=password)
-  return response
+  actualPassword = choice(['free fire', 'don don don', 'shawarma', 'addict', 'pubg'])
+  request.session['actualPassword'] = actualPassword
+  return render(request, 'TryDifferentView.html', {'pass': actualPassword})
