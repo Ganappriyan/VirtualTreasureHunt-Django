@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'CommentLine.apps.CommentlineConfig', # Adds Comment Line Page
     'StringFunction.apps.StringfunctionConfig', # Adds String Function Page
     'Home.apps.HomeConfig', # Adds Home Page
+    'Home2.apps.Home2Config', # Adds Home Page
+    'Home3.apps.Home3Config', # Adds Home Page
 ]
 
 MIDDLEWARE = [

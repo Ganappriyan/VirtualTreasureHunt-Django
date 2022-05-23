@@ -25,5 +25,7 @@ urlpatterns = [
     path('3diff', include('TryDifferentView.urls')),
     path('f1insp', include('CommentLine.urls')),
     path('f2strfn', include('StringFunction.urls')),
-    path('', include('Home.urls')),
+    path('s1', include('Home.urls')),
+    path('se2', include('Home2.urls')),
+    path('fin', include('Home3.urls')),
 ]
