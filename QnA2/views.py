@@ -1,5 +1,7 @@
+from datetime import datetime
 from django.shortcuts import render, redirect
 
+from DB.models import Participants
 
 def index(request):
     if(request.method == 'POST'):
@@ -10,6 +12,14 @@ def index(request):
                     == 'n') else 'Wrong Answer'
         
         if(h1 == h2 == h3 == ''):
+            teamname = request.session['teamname']
+            
+            ctime = datetime.now().strftime("%H:%M:%S")
+                
+            data = Participants.objects.get(teamname=teamname)
+            data.level1 = ctime
+            data.save()
+            
             return redirect('/2.2tryb')
         return render(request, 'QnA2.html', {'h1': h1, 'h2': h2, 'h3': h3})
 

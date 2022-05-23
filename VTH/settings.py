@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    'DB',
     'static.apps.StaticConfig', # Adds Static Files
     'QnA.apps.QnaConfig', # Adds QnA Page 1
     'QnA2.apps.Qna2Config', # Adds QnA Page 2
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     'CommentLine.apps.CommentlineConfig', # Adds Comment Line Page
     'StringFunction.apps.StringfunctionConfig', # Adds String Function Page
     'Home.apps.HomeConfig', # Adds Home Page
+    'Home2.apps.Home2Config', # Adds Home Page
+    'Home3.apps.Home3Config', # Adds Home Page
 ]
 
 MIDDLEWARE = [

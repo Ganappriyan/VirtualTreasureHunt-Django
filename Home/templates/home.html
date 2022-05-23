@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start</title>
   <style>
-    body {
+    body{
+      font-family: cursive;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -15,8 +17,15 @@
       background-color: #151b29;
     }
 
-    button {
-      font-family: cursive;
+    form {
+      display: flex;
+      height: 40vh;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    button, input {
       background: none;
       color: #ffa260;
       border: 2px solid;
@@ -25,8 +34,7 @@
       transition: 0.2s;
     }
 
-    button:hover {
-      font-family: cursive;
+    button:hover, input:hover {
       border-color: #f1ff5c;
       color: white;
       box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
@@ -40,6 +48,8 @@
 <body>
   <form method="post">
     {% csrf_token %}
+    <input type="text" name="teamname" placeholder="Team Name:" autocomplete="off" required>{{cmd}}
+    <input type="text" name="collegename" placeholder="College Name:" required>
     <button type="submit">Start</button>
   </form>
 </body>
