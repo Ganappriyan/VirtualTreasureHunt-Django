@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    'DB',
     'static.apps.StaticConfig', # Adds Static Files
     'QnA.apps.QnaConfig', # Adds QnA Page 1
     'QnA2.apps.Qna2Config', # Adds QnA Page 2
