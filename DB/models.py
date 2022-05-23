@@ -21,3 +21,4 @@ class Finalers(models.Model):
   level5 = models.CharField(max_length=10, default='0:0:0')
   totaltime2 = models.CharField(max_length=10, default='0:0:0')
   points2 = models.IntegerField(default=-1)
+  

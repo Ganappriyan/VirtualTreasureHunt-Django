@@ -30,7 +30,7 @@ def index(request):
     
     return render(request, 'TryDifferentView.html', {'pass': password, 'cmd': 'Wrong Password'})
   
-  password = choice(['free fire', 'don don don', 'shawarma', 'addict', 'pubg'])
+  password = 'iphone'
   response = render(request, 'TryDifferentView.html', {'pass': password})
   response.set_cookie(key='pass', value=password)
   return response
