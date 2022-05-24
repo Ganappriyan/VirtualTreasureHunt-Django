@@ -1,7 +1,8 @@
+from DB.models import Participants
 from datetime import datetime
 from django.shortcuts import redirect, render
 
-from DB.models import Participants
+from DB.models import Finalers
 
 
 def index(request):
@@ -14,11 +15,11 @@ def index(request):
         phoneno = request.POST.get('phoneno')
         request.session['teamname'] = teamname
 
-        if(Participants.objects.filter(teamname=teamname).exists()):
+        if(Finalers.objects.filter(teamname=teamname).exists()):
             return render(request, 'home.html', {'cmd': 'Team Name Taken, Try Different Name'})
 
-        data = Participants.objects.create(
-            teamname=teamname, collegename=collegename, starttime1=stime, phoneno=phoneno)
+        data = Finalers.objects.create(
+            teamname=teamname, collegename=collegename, starttime2=stime, phoneno=phoneno)
         data.save()
 
         return redirect('/f1insp')

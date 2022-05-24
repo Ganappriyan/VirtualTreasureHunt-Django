@@ -18,7 +18,7 @@ def index(request):
             return render(request, 'home.html', {'cmd': 'Team Name Taken, Try Different Name'})
 
         data = Participants.objects.create(
-            teamname=teamname, collegename=collegename, starttime1=stime, phoneno=phoneno)
+            teamname=teamname, collegename=collegename, set='2', starttime1=stime, phoneno=phoneno)
         data.save()
 
         return redirect('/1.2qnac')
