@@ -16,7 +16,7 @@ def index(request): # Render Page & Validation
       data.level2 = ctime
       data.save()
       
-      return redirect('/3diff') # TODO: Go to Next Page
+      return redirect('/3diff')
     return render(request, 'TryMultipleTimesComplete.html')
   
   return render(request, 'TryMultipleTimes.html')

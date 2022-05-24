@@ -15,8 +15,8 @@ def index(request): # Render Page & Validation
       data.save()
       
       return redirect('/3diff')
-    key = request.POST.get('key')
-    if(key in ('PASSWORD', 'password', 'WRONG', 'wrong', 'AGAIN', 'again')):
+    key = (request.POST.get('key')).lower()
+    if(key in ('password', 'wrong', 'again')):
       return render(request, 'TryAgainComplete.html')
     return render(request, 'TryAgain.html', {'res':'TRY AGAIN', 'info':'YOUR PASSWORD IS WRONG'})
   return render(request, 'TryAgain.html')
