@@ -122,7 +122,7 @@
                 <input class="btn btn-primary d-none d-sm-block" type="submit" value="Check" />
               </div>
               <!-- Trigger the Modal -->
-              <div class='text-center'>{{ cmd }}</div>
+              <div class='text-center' id='cmd'>{{ cmd }}</div>
             </form>
           </div>
         </div>
@@ -149,6 +149,11 @@
 
     span.onclick = function () {
       modal.style.display = "none";
+    }
+
+    setTimeout(displayHint, 600000)
+    function displayHint() {
+      document.getElementById('cmd').innerHTML = 'Try Opening this Page<br>from a Mobile'
     }
   </script>
 </body>
