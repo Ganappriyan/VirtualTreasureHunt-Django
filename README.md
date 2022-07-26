@@ -48,7 +48,7 @@ This Project contains Django Backend which can be Deployed in Python Web Server.
 Contributors’ names and contact info
 
 * Ganappriyan C: [@ganappriyan](mailto:ganappriyanc@gmail.com)
-* Dhinesh M: [@MD_MD](mailto:dhinesh88825@gmail.com)
+* Dhinesh M: [@MD25MD](mailto:dhinesh88825@gmail.com)
 
 ## License
 
